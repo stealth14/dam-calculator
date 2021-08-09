@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "dam-calculator",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

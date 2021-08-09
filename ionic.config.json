@@ -1,0 +1,7 @@
+{
+  "name": "dam-calculator",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
