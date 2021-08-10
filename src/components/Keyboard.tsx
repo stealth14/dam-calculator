@@ -16,7 +16,7 @@ export default function Keyboard(props: KeyboardProps) {
       .reverse()
       .map((value) => {
         return (
-          <IonCol key={`row_${value}`}>
+          <IonCol key={`column_${value}`}>
             <IonButton
               onClick={() => onPress(value)}
               fill="clear"
@@ -29,7 +29,7 @@ export default function Keyboard(props: KeyboardProps) {
       });
 
     keys.push(
-      <IonCol key={`row_${","}`}>
+      <IonCol key={`column_${","}`}>
         <IonButton onClick={() => onPress(",")} expand="full">
           {","}
         </IonButton>
