@@ -1,7 +1,7 @@
 import { IonItem, IonInput, IonLabel } from "@ionic/react";
 
 interface DisplayProps {
-  value: number;
+  value: string;
 }
 
 export default function Display(props: DisplayProps) {

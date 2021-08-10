@@ -1,0 +1,11 @@
+ion-grid {
+  --ion-grid-padding: 0px;
+}
+
+ion-col {
+  --ion-grid-column-padding: 0px;
+}
+
+ion-button {
+  margin: 0;
+}
