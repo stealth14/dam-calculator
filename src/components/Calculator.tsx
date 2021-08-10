@@ -17,6 +17,9 @@ export default function Calculator() {
           
           setValue([value, '', newValue].join(''));
         }}
+        onOperation={(operation: string) => {
+          
+        }}
       />
     </IonCard>
   );

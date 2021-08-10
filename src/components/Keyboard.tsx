@@ -3,12 +3,13 @@ import "./Calculator.css";
 
 interface KeyboardProps {
   onPress: Function;
+  onOperation: Function;
 }
 
 export default function Keyboard(props: KeyboardProps) {
-  const { onPress } = props;
+  const { onPress, onOperation } = props;
 
-  function renderKeys() {
+  function numericKeys() {
     let values = new Array(11).keys();
 
     const keys = Array.from(values)
@@ -46,5 +47,33 @@ export default function Keyboard(props: KeyboardProps) {
     });
   }
 
-  return <IonGrid>{renderKeys()}</IonGrid>;
+  function operationKeys() {
+    const operations = ["","+", "-", "*", "/", "C"];
+
+    const rows = new Array(3).keys();
+
+    const keys = operations.map((operation) => {
+      return (
+        <IonCol key={`column_${operation}`}>
+          <IonButton onClick={() => onOperation(operation)} expand="full" color="success">
+            {operation}
+          </IonButton>
+        </IonCol>
+      );
+    });
+
+    return Array.from(rows).map((row) => {
+      const base = row * 3;
+      const rowKeys = [...keys.slice(base + 1, base + 4)];
+
+      return <IonRow key={`row_${row}`}>{rowKeys}</IonRow>;
+    });
+  }
+
+  return (
+    <IonGrid>
+      {operationKeys()}
+      {numericKeys()}
+    </IonGrid>
+  );
 }
