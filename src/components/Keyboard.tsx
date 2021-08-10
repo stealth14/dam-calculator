@@ -46,5 +46,5 @@ export default function Keyboard(props: KeyboardProps) {
     });
   }
 
-  return <IonGrid className="ronny">{renderKeys()}</IonGrid>;
+  return <IonGrid>{renderKeys()}</IonGrid>;
 }
