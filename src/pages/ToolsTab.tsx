@@ -1,14 +1,13 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab1.css';
+import './ToolsTab.css';
 import Calculator from '../components/Calculator';
 
-const Tab1: React.FC = () => {
+const ToolsTab: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>tablaaaa 1</IonTitle>
+          <IonTitle>Calculadora</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -23,4 +22,4 @@ const Tab1: React.FC = () => {
   );
 };
 
-export default Tab1;
+export default ToolsTab;
