@@ -23,9 +23,5 @@ export default function Keyboard() {
     });
   }
 
-  return (  
-    <IonGrid>
-      {renderKeys()}
-    </IonGrid>
-  );
+  return <IonGrid>{renderKeys()}</IonGrid>;
 }
